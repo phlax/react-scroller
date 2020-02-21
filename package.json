@@ -1,0 +1,86 @@
+{
+    "name": "@phlax/react-scroller",
+    "version": "0.0.11",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/phlax/react-scroller"
+    },
+    "scripts": {
+        "start": "npm run build -- -w",
+        "build": "cross-env NODE_ENV=production babel . -d lib --ignore babel.config.js --ignore tests --ignore .git --ignore node_modules --ignore lib",
+        "test": "jest --coverage",
+        "lint": "eslint . --ignore-pattern '**/lib/**/*.js'"
+    },
+    "jest": {
+        "verbose": true,
+        "testMatch": [
+            "**/tests/**/*.js"
+        ],
+        "setupFilesAfterEnv": [
+            "jest-enzyme"
+        ],
+        "testEnvironment": "enzyme",
+        "testEnvironmentOptions": {
+            "enzymeAdapter": "react16"
+        },
+        "moduleNameMapper": {
+            "@phlax/react-scroller(.*)": "<rootDir>$1"
+        },
+        "collectCoverageFrom": [
+            "**/*.{js,jsx,ts,tsx}",
+            "!**/babel.config.js",
+            "!**/lib/**/*",
+            "!**/coverage/**/*",
+            "**/tests/**/*.{js,jsx,ts,tsx}",
+            "!src/**/*.d.ts"
+        ],
+        "coverageDirectory": "./coverage/",
+        "collectCoverage": true,
+        "coverageReporters": [
+            "text",
+            "text-summary",
+            "lcov"
+        ],
+        "forceCoverageMatch": [
+            "**/tests/**/*.{js,jsx,ts,tsx}"
+        ]
+    },
+    "files": [
+        "lib/**/*"
+    ],
+    "main": "lib/index.js",
+    "peerDependencies": {
+        "react": "^16.13.0",
+        "react-dom": "^16.13.0",
+        "react-mousetrap": "^0.2.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.8.4",
+        "@babel/core": "^7.8.6",
+        "@babel/plugin-proposal-class-properties": "^7.8.3",
+        "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+        "@babel/preset-env": "^7.8.6",
+        "@babel/preset-react": "^7.8.3",
+        "babel-eslint": "^10.1.0",
+        "babel-jest": "^25.1.0",
+        "babel-plugin-rewire": "^1.2.0",
+        "babel-plugin-transform-import-css": "^1.0.0-alpha.11",
+        "codecov": "^3.6.5",
+        "cross-env": "^7.0.0",
+        "enzyme": "^3.11.0",
+        "enzyme-adapter-react-16": "^1.15.2",
+        "eslint": "^6.8.0",
+        "eslint-plugin-babel": "^5.3.0",
+        "eslint-plugin-jest": "^23.8.2",
+        "eslint-plugin-react": "^7.18.3",
+        "jest": "^25.1.0",
+        "jest-environment-enzyme": "^7.1.2",
+        "jest-enzyme": "^7.1.2",
+        "react": "^16.13.0",
+        "react-dom": "^16.13.0",
+        "react-mousetrap": "^0.2.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
