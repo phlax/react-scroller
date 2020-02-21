@@ -19,5 +19,8 @@ default-packages
 
 # Only apps should have lockfiles
 npm-shrinkwrap.json
-package-lock.json
 yarn.lock
+
+*~
+coverage
+lib
