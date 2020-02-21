@@ -1,0 +1,45 @@
+
+.react-scroller-nav input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    width: 4em;
+    text-align: right;
+    border: none;
+    background: inherit;
+    padding: .2em;
+    margin: 0 .2em;
+}
+
+
+.react-scroller-nav input[type="number"]:hover,
+.react-scroller-nav input[type="number"]:focus {
+    background: #fff;
+}
+
+.react-scroller-nav input[type=number]::-webkit-inner-spin-button,
+.react-scroller-nav input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+
+.react-scroller-nav,
+.react-scroller-nav btn {
+    font-size: .9em;
+}
+
+.react-scroller-nav .total {
+    min-width: 4em;
+    display: inline-block;
+    text-align: left;
+    padding: .2em;
+    margin: 0 .2em;
+}
+
+.react-scroller-nav {
+    display: inline-block
+}
+
+.react-scroller-nav button {
+    width: 2em;
+}
