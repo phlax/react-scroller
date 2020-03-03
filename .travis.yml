@@ -1,0 +1,31 @@
+# https://travis-ci.org/#!/phlax/react-scroller
+language: node_js
+node_js:
+  - 11.10.0
+
+cache:
+  npm: false
+  directories:
+    - node_modules
+
+install:
+  - npm install .
+
+script:
+  - npm run test
+  - npm run lint
+
+after_success:
+  - ./node_modules/.bin/codecov
+
+before_deploy:
+  - npm run build
+
+deploy:
+  provider: npm
+  edge: true
+  api_token: $NPM_API_TOKEN
+  email: ryan@synca.io
+  on:
+    tags: true
+    branch: master
