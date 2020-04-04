@@ -8,7 +8,7 @@
     },
     "scripts": {
         "start": "npm run build -- -w",
-        "build": "cross-env NODE_ENV=production babel . -d lib --ignore babel.config.js --ignore tests --ignore .git --ignore node_modules --ignore lib",
+        "build": "cross-env NODE_ENV=production babel . -d lib --ignore babel.config.js --ignore tests --ignore .git --ignore node_modules --ignore lib --ignore coverage",
         "test": "jest --coverage",
         "lint": "eslint . --ignore-pattern '**/lib/**/*.js'"
     },
